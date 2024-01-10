@@ -1,0 +1,11 @@
+# Dockerfile para o frontend React (imagem Debian)
+FROM node:alpine AS frontend
+
+# Defina o diretório de trabalho para o aplicativo React
+WORKDIR /usr/src/app/front
+
+# Expor a porta (caso necessário, depende da aplicação)
+EXPOSE 3000
+
+# Comando para iniciar o servidor ou executar a aplicação React
+CMD ["npm", "start"]
